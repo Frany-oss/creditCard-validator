@@ -1,19 +1,19 @@
 import express from "express";
 import mongoose from "mongoose";
-import errorHandler from "./middleware/errorHandler";
-import cardRoutes from "./routes/card.routes";
 
-import swaggerOptions from "./swaggerOptions";
+import swaggerOptions from "../swaggerOptions";
 import swaggerUi from "swagger-ui-express";
 import swaggerJsdoc from "swagger-jsdoc";
+import cardRoutes from "./routes/card.routes";
+import errorHandler from "./middleware/errorHandler";
 
 const app = express();
-require('dotenv').config();
+require("dotenv").config();
 const serverless = require("serverless-http");
 const PORT = process.env.PORT || 3456;
 
 app.use(express.json());
-const specs = swaggerJsdoc(swaggerOptions)
+const specs = swaggerJsdoc(swaggerOptions);
 
 mongoose.connect(process.env.URI || "");
 

@@ -15,14 +15,16 @@ beforeAll(async () => {
 });
 
 afterAll(async () => {
+  await mongoose.connection.dropDatabase();
   await mongoose.disconnect();
   await mongod.stop();
 });
 
 beforeEach(async () => {
-  const collections = await mongoose.connection.db.collections();
+  const collections = await mongoose.connection.collections;
 
-  for (const collection of collections) {
+  for (const key in collections) {
+    const collection = collections[key];
     await collection.deleteMany({});
   }
 });

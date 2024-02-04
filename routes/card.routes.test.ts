@@ -1,5 +1,5 @@
 import request from "supertest";
-import { app } from "..";
+import { app } from "../src/index";
 
 describe("Card Routes", () => {
   it("should create a token", async () => {

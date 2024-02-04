@@ -8,6 +8,6 @@
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist"
   },
-  "include": ["src/**/*.ts", "src/swaggerOptions.ts"],
+  "include": ["src/**/*.ts", "swaggerOptions.ts", "src/index.ts", "setupTests.ts", "swagger-generator.ts", "services/card.service.test.ts"],
   "exclude": ["node_modules"]
 }
