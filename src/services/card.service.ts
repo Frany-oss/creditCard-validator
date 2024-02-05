@@ -12,7 +12,7 @@ export const createToken = async (req: Request): Promise<{ token: string }> => {
       !card_number ||
       !isValidLuhn(card_number) ||
       !cvv ||
-      !expiration_month ||
+      expiration_month > 12 ||
       !isValidExpirationYear(expiration_year) ||
       !email ||
       !isValidEmail(email)

@@ -15,7 +15,7 @@ export const createTokenHandler = async (
       statusCode = 400;
     } else if (error.message === "Failed to create token.") {
       console.error("Error during token creation:", error);
-      statusCode = 422;
+      statusCode = 400;
     }
 
     res.status(statusCode).json({ error: error.message });

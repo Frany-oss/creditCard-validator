@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 
-import swaggerOptions from "../swaggerOptions";
+import swaggerOptions from "./swaggerOptions";
 import swaggerUi from "swagger-ui-express";
 import swaggerJsdoc from "swagger-jsdoc";
 import cardRoutes from "./routes/card.routes";

@@ -1,6 +1,8 @@
 import mongoose, { Schema } from "mongoose";
 import {
+  isValidCvvNumber,
   isValidEmail,
+  isValidExpirationMonth,
   isValidExpirationYear,
   isValidLuhn,
   isValidToken,
@@ -37,8 +39,24 @@ const CardSchema: Schema = new Schema({
       message: "Invalid credit card number.",
     },
   },
-  cvv: { type: Number, required: true, minlength: 3, maxlength: 4 },
-  expirationMonth: { type: String, required: true, minlength: 1, maxlength: 2 },
+  cvv: {
+    type: Number,
+    required: true,
+    validate: {
+      validator: isValidCvvNumber,
+      message: "CVV must have 3 or 4 digits.",
+    },
+  },
+  expirationMonth: {
+    type: String,
+    required: true,
+    minlength: 1,
+    maxlength: 2,
+    validate: {
+      validator: isValidExpirationMonth,
+      message: "Invalid expiration month.",
+    },
+  },
   expirationYear: {
     type: String,
     required: true,

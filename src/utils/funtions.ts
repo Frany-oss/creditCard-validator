@@ -47,3 +47,15 @@ export const isValidExpirationYear = (year: string): boolean => {
 
   return !isNaN(inputYear) && inputYear >= currentYear && inputYear <= maxYear;
 };
+
+export const isValidExpirationMonth = (month: string): boolean => {
+  const inputMonth = parseInt(month, 10);
+
+  return !isNaN(inputMonth) && inputMonth >= 1 && inputMonth <= 12;
+};
+
+export const isValidCvvNumber = (value: number): boolean => {
+  const cvvString = value.toString();
+  const digitCount = cvvString.length;
+  return digitCount >= 3 && digitCount <= 4;
+};
