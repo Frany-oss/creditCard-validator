@@ -1,8 +1,8 @@
-# Culqi Backend
+# Credit Card Validator
 
 ## Descripcion
 
-Reto backend de Culqi. Creacion de token a partir de tarjeta de credito.
+Creacion de token a partir de tarjeta de credito.
 
 ## Prerequisito
 
@@ -12,12 +12,12 @@ Reto backend de Culqi. Creacion de token a partir de tarjeta de credito.
 ### 1. **Clonar el repositorio:**
 
    ```bash
-   git clone https://github.com/your-username/culqi-backend.git
+   git clone https://github.com/your-username/creditCard-validator.git
   ```
 
 ### 2. Instalar dependencias
 
-Entrar a la carpeta del proyecto ```cd culqi-backend``` y correr:
+Entrar a la carpeta del proyecto ```cd creditCard-validator``` y correr:
 ```bash
 npm install
 ```
